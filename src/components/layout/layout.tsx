@@ -1,16 +1,32 @@
 import React from "react";
-import { Link, Outlet } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
+import { Dropdown } from "../dropdown/dropdown";
+
+import { HeadMenu, HeadLink, Example, DropWrap } from './style'
+import arrow from '../../images/Vector.svg'
 
 export const Layout = () => {
     return (
         <>
             <header>
-                <Link to="/">ОБО МНЕ</Link>
-                <Link to="/contacts">КОНТАКТЫ</Link>
-            {/* <HeadMenu><Link to="/">ПРИМЕРЫ РАБОТ</Link></HeadMenu> */}
+                <HeadMenu>
+                    <HeadLink to="/">ОБО МНЕ</HeadLink>
+                    <Example>
+                        ПРИМЕРЫ РАБОТ
+                        <img src={arrow} alt="примеры"/>
+                        <DropWrap>
+                            <Dropdown color="red"/>
+                        </DropWrap>
+                        
+                    </Example>
+                    <HeadLink to="/contacts">КОНТАКТЫ</HeadLink>
+                    
+                </HeadMenu>
             </header>
             <Outlet />
-            <footer>Благодарю за внимание!</footer>
+            <footer>
+                <HeadMenu>Благодарю за внимание!</HeadMenu>
+            </footer>
         </>
     )
 }
