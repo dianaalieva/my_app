@@ -1,17 +1,16 @@
 import styled from "@emotion/styled";
 
 export const MainWrap = styled.div`
-    background-color: #201A47;
+    background-color: ${props => props.theme.color.bg};
     padding:50px;
 `;
 export const TextWrap = styled.div`
     padding: 15px;
-    color: #ffffff;
+    color: ${props => props.theme.color.text};
     font-size: 18px;
 `;
 
-export const FT = styled.div`
+export const FotoWrap = styled.div`
     width: 100px;
     height: 150px;
-    background-image: url("../../images/foto.png");
 `;

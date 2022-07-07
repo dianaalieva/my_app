@@ -11,7 +11,8 @@
       "resolveJsonModule": true,
       "isolatedModules": true,
       "noEmit": true,
-      "jsx": "react"
+      "jsx": "react",
+      "typeRoots": ["node_modules/@types", "src/typings", "@types"],
     },
-    "include": ["src", "src/app.tsx"]
+    "include": ["src", "src/app.tsx", "@types/emotion.d.ts", "@types/custom.d.ts"]
   } 

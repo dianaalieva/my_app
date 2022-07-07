@@ -6,14 +6,15 @@ import bab from '../../images/logos_babel.svg'
 import {
     MainWrap,
     TextWrap,
-    FT
+    FotoWrap
 } from './style'
 
 export const Main = () => {
     return (
         <MainWrap>
-            <FT />
-            <img src={fot} alt="fot"/>
+            <FotoWrap>
+                <img src={fot} alt="fot"/>
+            </FotoWrap>
             <TextWrap>gfjhgjjkbb vgcgdfgkhlk;jfdgdgd</TextWrap>
             <img src={bab} alt="babel"/>
         </MainWrap>
