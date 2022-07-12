@@ -11,6 +11,7 @@ import { Auth } from "./pages/auth/auth";
 import dark from './themes/dark';
 import light from "./themes/light";
 import { GlobalStyles } from './globalStyle'
+import { Container } from "./components/container";
 
 const App = () => {
 
@@ -23,6 +24,7 @@ const App = () => {
         <>
             <ThemeProvider theme={theme}>
                 <Global styles={GlobalStyles}/>
+                <Container>
                     <Routes>
                         <Route path="/" element={<Layout  handleChangeTheme={handleChangeTheme}/>}>
                             <Route index element={<Main />} />
@@ -32,6 +34,7 @@ const App = () => {
                             <Route path="/example/auth" element={<Auth />} />
                         </Route>
                     </Routes>
+                </Container>
             </ThemeProvider>
         </>
     )

@@ -6,7 +6,11 @@ export const GlobalStyles = css`
     body {
         font-family: 'Russo One', sans-serif;
         margin: 0;
- 		width: 100%;	
+ 		width: 100vw;
+        height: 100vh;
+        ::-webkit-scrollbar {
+            width: 0;
+        }
     }
 
     * {
