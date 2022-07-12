@@ -1,16 +1,41 @@
-import React from "react";
-import { Link, Outlet } from 'react-router-dom';
+import React, { useContext } from "react";
+import { Outlet } from 'react-router-dom';
+import { Dropdown } from "../dropdown/dropdown";
+import { ThemeContext } from "@emotion/react";
 
-export const Layout = () => {
+import { HeadMenu, HeadLink, Example, DropWrap } from './style'
+import arrow from '../../images/Vector.svg'
+
+type LayoutProps = {
+    handleChangeTheme: () => void
+}
+
+export const Layout = ({ handleChangeTheme } : LayoutProps) => {
+
+    const { color, title } = useContext(ThemeContext)
+
     return (
         <>
             <header>
-                <Link to="/">ОБО МНЕ</Link>
-                <Link to="/contacts">КОНТАКТЫ</Link>
-            {/* <HeadMenu><Link to="/">ПРИМЕРЫ РАБОТ</Link></HeadMenu> */}
+                <HeadMenu>
+                    <button onClick={handleChangeTheme}>click</button>
+                    <HeadLink to="/">ОБО МНЕ</HeadLink>
+                    <Example>
+                        ПРИМЕРЫ РАБОТ
+                        <img src={arrow} alt="примеры"/>
+                        <DropWrap>
+                            <Dropdown color="red"/>
+                        </DropWrap>
+                        
+                    </Example>
+                    <HeadLink to="/contacts">КОНТАКТЫ</HeadLink>
+                    
+                </HeadMenu>
             </header>
             <Outlet />
-            <footer>Благодарю за внимание!</footer>
+            <footer>
+                <HeadMenu>Благодарю за внимание!</HeadMenu>
+            </footer>
         </>
     )
 }

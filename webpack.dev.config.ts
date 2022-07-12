@@ -13,6 +13,7 @@ const config: Configuration = {
   mode: "development",
   output: {
     publicPath: "/",
+    assetModuleFilename: "images/[hash][ext][query]"
   },
   entry: "./src/index.tsx",
   module: {
@@ -30,6 +31,10 @@ const config: Configuration = {
             ],
           },
         },
+      },
+      {
+        test: /\.(png|jpg|jpeg|gif|svg)$/i,
+        type: "asset/resource",
       },
     ],
   },
