@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Outlet } from 'react-router-dom';
 
-import { HeadLink, Example, ThemeButton, Drop, NavLink, DropsRow, DropOutside, DropBlock } from './style'
+import { HeadLink, Example, ThemeButton, Drop, NavLink, Nav, DropsRow, DropOutside, DropBlock, ImgArrow } from './style'
 import { Contain } from '../container'
 import arrow from '../../images/arrowDropdown.svg'
 import light from '../../images/light.svg'
@@ -40,13 +40,12 @@ export const Layout = ({ handleChangeTheme } : LayoutProps) => {
                         <DropBlock>
                             <Example onClick={handleMenuClick}>
                                 ПРИМЕРЫ РАБОТ
-                                <img src={arrow} alt="примеры"/> 
+                                <ImgArrow src={arrow} alt="примеры"/> 
                             </Example>
                             {showMenu && ( 
                                 <Drop>
-                                    <NavLink to="/example/game"><DropsRow>Game</DropsRow></NavLink>
-                                    <NavLink to="/example/shop"><DropsRow>Shop</DropsRow></NavLink>
-                                    <NavLink to="/example/auth"><DropsRow>Auth</DropsRow></NavLink>
+                                    <NavLink to="/example/game"><DropsRow>Личный ПЭТ - проект</DropsRow></NavLink>
+                                    <Nav href="https://b1.inno-js.ru/basket" target="_blank"><DropsRow>Командная разработка</DropsRow></Nav>
                                 </Drop>
                             )}                            
                         </DropBlock>  

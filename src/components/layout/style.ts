@@ -15,23 +15,23 @@ export const HeadLink = styled(Link)`
     text-decoration: none;
 `;
 export const DropBlock = styled.div`
-    display: flex;
-    flex-direction: column;
+    position: relative;
 `;
 export const Example = styled.button`
     color: ${props => props.theme.color.text};
     font: inherit;
     font-size: 24px;
-    padding: 0 20px;
     border: none;
     background-color: transparent;
 `;
+export const ImgArrow = styled.img`
+    padding-left: 10px;
+`;
 export const Drop = styled.div`
     background-color: ${props => props.theme.color.secondary};
-    right: 43%;
-    top: 90px;
     transition: 0.1s;
-    position: fixed;
+    position: absolute;
+    left: 30px;
     width: 200px;
 `;
 export const DropsRow = styled.div`
@@ -53,6 +53,14 @@ export const ThemeButton = styled.button`
     box-shadow: 1px 1px 2px #000;
 `;
 export const NavLink = styled(Link)`
+    color: ${props => props.theme.color.text};
+    font-size: 20px;
+    text-decoration: none;
+    &:hover, &:focus {
+        color: yellow;
+    }
+`;
+export const Nav = styled.a`
     color: ${props => props.theme.color.text};
     font-size: 20px;
     text-decoration: none;
