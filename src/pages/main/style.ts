@@ -1,7 +1,8 @@
 import styled from "@emotion/styled";
 
-export const TextWrap = styled.div`
+export const Paragraph = styled.p`
+    padding: 5px 40px;
+    text-align: center;
     color: ${props => props.theme.color.text};
     font-size: 18px;
-    padding: 0 20px;
 `;
