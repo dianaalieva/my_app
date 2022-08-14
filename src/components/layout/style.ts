@@ -28,7 +28,7 @@ export const ImgArrow = styled.img`
     padding-left: 10px;
 `;
 export const Drop = styled.div`
-    background-color: ${props => props.theme.color.secondary};
+    background-color: ${props => props.theme.color.primary};
     transition: 0.1s;
     position: absolute;
     left: 30px;
@@ -39,7 +39,7 @@ export const DropsRow = styled.div`
     box-shadow: inset 2px 2px 10px #201A45;
     text-align: center;
     &:hover {
-        background-color: ${props => props.theme.color.bg};
+        background-color: ${props => props.theme.color.secondary};
     }
 `;
 export const ThemeButton = styled.button`
@@ -57,7 +57,7 @@ export const NavLink = styled(Link)`
     font-size: 20px;
     text-decoration: none;
     &:hover, &:focus {
-        color: yellow;
+        color: ${props => props.theme.color.accent};
     }
 `;
 export const Nav = styled.a`
@@ -65,7 +65,7 @@ export const Nav = styled.a`
     font-size: 20px;
     text-decoration: none;
     &:hover, &:focus {
-        color: yellow;
+        color: ${props => props.theme.color.accent};
     }
 `;
 export const DropOutside = styled.div`

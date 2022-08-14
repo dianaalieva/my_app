@@ -8,6 +8,7 @@ export const GlobalStyles = css`
         margin: 0;
  		width: 100vw;
         height: 100vh;
+        overflow: auto;
         ::-webkit-scrollbar {
             width: 0;
         }

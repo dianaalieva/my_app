@@ -5,9 +5,10 @@ import { ThemeProvider, Global } from '@emotion/react'
 import { Main } from './pages/main/main'
 import { Contacts } from './pages/contacts/contacts'
 import { Layout } from "./components/layout/layout";
-import { Game } from "./pages/game/game";
-import { Shop } from "./pages/shop/shop";
-import { Auth } from "./pages/auth/auth";
+import { Example } from "./pages/game/example/example";
+import { Start } from "./pages/game/start/start"
+import { Raiting } from "./pages/game/raiting/raiting";
+import { Game } from "./pages/game/game/game";
 import dark from './themes/dark';
 import light from "./themes/light";
 import { GlobalStyles } from './globalStyle'
@@ -29,9 +30,10 @@ const App = () => {
                         <Route path="/" element={<Layout  handleChangeTheme={handleChangeTheme}/>}>
                             <Route index element={<Main />} />
                             <Route path="contacts" element={<Contacts />} />
+                            <Route path="/example/game/example" element={<Example />} />
+                            <Route path="/example/game/start" element={<Start />} />
+                            <Route path="/example/game/raiting" element={<Raiting />} />
                             <Route path="/example/game" element={<Game />} />
-                            <Route path="/example/shop" element={<Shop />} />
-                            <Route path="/example/auth" element={<Auth />} />
                         </Route>
                     </Routes>
                 </Container>

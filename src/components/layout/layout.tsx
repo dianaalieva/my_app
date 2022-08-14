@@ -1,7 +1,18 @@
 import React, { useState, useEffect } from "react";
 import { Outlet } from 'react-router-dom';
 
-import { HeadLink, Example, ThemeButton, Drop, NavLink, Nav, DropsRow, DropOutside, DropBlock, ImgArrow } from './style'
+import { 
+    HeadLink, 
+    Example, 
+    ThemeButton, 
+    Drop, 
+    NavLink, 
+    Nav, 
+    DropsRow, 
+    DropOutside, 
+    DropBlock, 
+    ImgArrow 
+} from './style'
 import { Contain } from '../container'
 import arrow from '../../images/arrowDropdown.svg'
 import light from '../../images/light.svg'
@@ -44,7 +55,7 @@ export const Layout = ({ handleChangeTheme } : LayoutProps) => {
                             </Example>
                             {showMenu && ( 
                                 <Drop>
-                                    <NavLink to="/example/game"><DropsRow>Личный ПЭТ - проект</DropsRow></NavLink>
+                                    <NavLink to="/example/game/example"><DropsRow>Личный ПЭТ - проект</DropsRow></NavLink>
                                     <Nav href="https://b1.inno-js.ru/basket" target="_blank"><DropsRow>Командная разработка</DropsRow></Nav>
                                 </Drop>
                             )}                            
@@ -56,9 +67,6 @@ export const Layout = ({ handleChangeTheme } : LayoutProps) => {
                     </Contain>
                 </header>
                 <Outlet />
-                <footer>
-                    <Contain>Благодарю за внимание!</Contain>
-                </footer>
             </DropOutside>
         </>
     )
