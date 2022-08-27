@@ -1,7 +1,7 @@
 import React from "react";
 import Lottie from 'lottie-react'
 
-import ExampleLottie from '../../../animations/Example-play.json'
+import ExampleLottie from '../../../animations/Example_lottie.json'
 import {
     GameLink,
     ScreenGame,
@@ -18,13 +18,14 @@ export const Example = () => {
             <ScreenGame>
                 Собери как можно больше кружочков, установи рекорд!
                 <ExampleGame>
-                    <Lottie animationData={ ExampleLottie } />
-                </ExampleGame>   
+                    <Lottie animationData={ ExampleLottie } /> 
+                </ExampleGame>
             </ScreenGame>
             <LinksWrapper>
-                <GameLink to="/example/game/start">Начать игру</GameLink>
+                <GameLink to="/example/game">Начать игру</GameLink>
                 <GameLink to="/example/game/raiting">Посмотреть рейтинг</GameLink>
-            </LinksWrapper>
+            </LinksWrapper>      
+            
         </>
     )
 }

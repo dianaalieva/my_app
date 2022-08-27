@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Screen } from '../start/style'
+import { Screen } from './style'
 
 export const Game = () => {
     return (

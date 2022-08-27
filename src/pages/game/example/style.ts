@@ -5,6 +5,7 @@ export const GameTitle = styled.h1`
     font-size: 2rem;
     color: ${props => props.theme.color.text};
     text-align: center;
+    margin: 2rem;
 `;
 export const ScreenGame = styled.div`
     position: relative;
@@ -21,13 +22,9 @@ export const ScreenGame = styled.div`
 `;
 export const ExampleGame = styled.div`
     position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%;
-    height: 80%;
-    background-color: ${props => props.theme.color.secondary};
-
+    top: 20%;
+    bottom: 20%;
+    left: 40%;
 `;
 export const GameLink = styled(Link)`
     font-size: 1.5rem;

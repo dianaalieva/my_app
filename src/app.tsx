@@ -6,7 +6,6 @@ import { Main } from './pages/main/main'
 import { Contacts } from './pages/contacts/contacts'
 import { Layout } from "./components/layout/layout";
 import { Example } from "./pages/game/example/example";
-import { Start } from "./pages/game/start/start"
 import { Raiting } from "./pages/game/raiting/raiting";
 import { Game } from "./pages/game/game/game";
 import dark from './themes/dark';
@@ -31,7 +30,6 @@ const App = () => {
                             <Route index element={<Main />} />
                             <Route path="contacts" element={<Contacts />} />
                             <Route path="/example/game/example" element={<Example />} />
-                            <Route path="/example/game/start" element={<Start />} />
                             <Route path="/example/game/raiting" element={<Raiting />} />
                             <Route path="/example/game" element={<Game />} />
                         </Route>
